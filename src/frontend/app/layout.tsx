@@ -19,12 +19,12 @@ const stardewChatFont = localFont({
 })
 
 const stardewTitleFont = localFont({
-  src: './fonts/Stardew Valley Regular.ttf',
+  src: './fonts/PixelGameFont.ttf',
   variable: "--font-stardew-title"
 })
 
 export const metadata: Metadata = {
-  title: "Stardew Seer",
+  title: "Stardew Valley Almanac",
   description: "A RAG chatbot for the video game Stardew Valley",
 };
 

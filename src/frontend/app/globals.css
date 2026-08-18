@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --background-chat: #F5DEB3;
+  --title-color: #DE9B00;
 }
 
 @theme inline {
@@ -20,14 +22,26 @@
 }
 
 body {
-  background: var(--background);
+  background-image: url("/background.png");
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-family: var(--font-stardew-title), Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-family: var(--font-stardew-title) ,Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: var(--title-color);
+}
+
+.chatsection {
+  text-align: center;
+  background: #f2f0ef;
+  border: 1px solid;
+  border-radius: 20px;
+  min-height: 100dvh;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
 }
 
 .messageHistory {
@@ -44,16 +58,33 @@ h1 {
 
 .user-message {
   text-align: right;
+  margin: 5px;
 }
 
 .system-message {
   text-align: left;
+  margin: 5px;
 }
 
 .user-message > p {
+  background: var(--background-chat);
   display: inline-block;
+  max-width: 475px;
+  border: 3px solid #855E42;
+  border-radius: 6px;
+  padding: 1px 4px;
 }
 
 .system-message > p {
+  background: var(--background-chat);
   display: inline-block;
+  max-width: 475px;
+  border: 3px solid #855E42;
+  border-radius: 6px;
+  padding: 1px 4px;
+}
+
+.queryBox {
+  border: 1px solid;
+  border-radius: 6px;
 }
