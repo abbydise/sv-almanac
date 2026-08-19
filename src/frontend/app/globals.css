@@ -21,6 +21,14 @@
   }
 }
 
+html {
+  width: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 body {
   background-image: url("/background.png");
   color: var(--foreground);
@@ -34,27 +42,40 @@ h1 {
   margin-bottom: 50px;
 }
 
-.chatsection {
+.mainsection {
   text-align: center;
   background: #f2f0ef;
   border: 1px solid;
   border-radius: 20px;
-  min-height: 100dvh;
+  height: 100dvh;
   width: 60%;
   margin: auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatsection {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .messageHistory {
   justify-content: center;
   font-family: var(--font-stardew-chat), Arial, Helvetica, sans-serif;
   padding-bottom: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .form {
   justify-self: center;
-  position: fixed;
   bottom: 20px;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .user-message {
@@ -74,7 +95,7 @@ h1 {
   border: 3px solid #855E42;
   border-radius: 6px;
   padding: 1px 4px;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .system-message > p {
@@ -84,7 +105,7 @@ h1 {
   border: 3px solid #855E42;
   border-radius: 6px;
   padding: 1px 4px;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .queryBox {

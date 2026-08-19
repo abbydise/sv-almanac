@@ -45,10 +45,16 @@ export default function Home() {
     }
 
   return (
-      <div className="chatsection">
+      <div className="mainsection">
         <h1 className="title">Stardew Valley Almanac</h1>
-          <div className="messageHistory"><Chatbox messages={messageHistory} /></div>
-          <div className="form"><Textbox handleSubmit={handleSubmit}/></div>
+          <div className="chatsection">
+              <div className="messageHistory">
+                  <Chatbox messages={messageHistory} />
+              </div>
+              <div className="form">
+                  <Textbox handleSubmit={handleSubmit}/>
+              </div>
+          </div>
       </div>
   )
 }
