@@ -26,6 +26,7 @@ const stardewTitleFont = localFont({
 export const metadata: Metadata = {
   title: "Stardew Valley Almanac",
   description: "A RAG chatbot for the video game Stardew Valley",
+  icons: "/favicon.png"
 };
 
 export default function RootLayout({
